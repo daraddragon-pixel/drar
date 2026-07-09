@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&display=swap');
+
+@theme {
+  --font-sans: "Times New Roman", "Battambang", sans-serif;
+  --font-serif: "Times New Roman", "Battambang", serif;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body, html {
+    font-family: "Times New Roman", "Battambang", sans-serif;
+    @apply bg-gray-50 text-gray-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
+  }
+}
